@@ -1,0 +1,102 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="/register.css" />
+    <script
+      src="https://kit.fontawesome.com/03937b2ea7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar__container">
+        <a href="/" id="navbar__logo"> <i class="fas fa-gem"></i> NEXT</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="/" class="navbar__links">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/" class="navbar__links">Tech</a>
+          </li>
+          <li class="navbar__item">
+            <a href="/register" class="navbar__links">Product</a>
+          </li>
+          <li class="navbar__btn">
+            <a href="/pages/login" class="button">Sign In</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <form action="/auth_reg" method="POST" class="signup__form">
+        <h2 class="title">Sign Up</h2>
+        <div class="input__field">
+          <i class="fas fa-user"></i>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Username"
+            id="name"
+            name="username"
+          />
+        </div>
+        <div class="input__field">
+          <i class="fas fa-envelope"></i>
+          <input type="email" placeholder="Email" name="email" />
+        </div>
+        <div class="input__field">
+          <i class="fas fa-lock"></i>
+          <input type="password" placeholder="Password" name="password" />
+        </div>
+        <div class="input__field">
+          <i class="fas fa-lock"></i>
+          <input
+            type="password"
+            placeholder="Repeat Password"
+            name="confPassword"
+          />
+        </div>
+        <button type="submit" class="btn solid">Submit</button>
+        <p class="social__text">Or sign Up with social platforms</p>
+        <div class="social__media">
+          <a href="#" class="social__icon">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="social__icon">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="social__icon">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="#" class="social__icon">
+            <i class="fab fab fa-linkedin"></i>
+          </a>
+        </div>
+        <div class="new__here">
+          Already have an account?
+          <a href="/pages/login" class="newhere__btn" id="signup__button">Sign
+            In</a>
+        </div>
+        {{#if message}}
+          <h4 class="alert alert-danger mt-4">{{message}}</h4>
+        {{/if}}
+      </form>
+
+    </div>
+    <script src="/app.js"></script>
+  </body>
+</html>
